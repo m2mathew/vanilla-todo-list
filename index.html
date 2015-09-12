@@ -3,9 +3,52 @@
 <head>
     <title>Vanilla To-do List</title>
     <link rel="stylesheet" type="text/css" href="/styles/main.sass.sass.css">
-
 </head>
 <body>
+    <header>
+        <h1 class="header-title">Vanilla To-do List</h1>
+    </header>
 
+    <section class="user-text">
+        <div class="input-field">
+            <input type="text" placeholder="to-do list items" id="doLabel"/>
+            <button name="button" id="addButton"></button>
+        </div>
+    </section>
+
+    <section class="main-section">
+        <h1>Your list:</h1>
+        <div id="mainList"></div>
+        <div>
+            <button name="button" id="resetButton">Reset values</button>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>
+
+<!-- STEP ONE
+
+Create a simple web page that has an input text box, a button, and an empty section below the textbox and button. -->
+
+
+<!-- STEP TWO
+
+Use an event listener and event handler to console.log whatever is in the input box whenever the button is clicked. -->
+
+
+<!-- STEP THREE
+
+Create an empty array. Whenever the button is clicked, whatever is in the input box should be added to the array. -->
+
+
+<!--  STEP FOUR
+
+Create a function called render that clears out all of the html inside of the section.-->
+
+
+<!-- STEP FIVE
+
+Inside your render function, after the content of your section is cleared, iterate over your array and build up a HTML string that contains all of the to-do items in your array. Then set that newly created string to the contents of your section. -->
