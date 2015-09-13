@@ -10,6 +10,7 @@ header {
     text-align: center;
     display: block;
     padding: 1.5em;
+    text-shadow: 4px 4px 2px #222;
     }
 }
 
@@ -60,4 +61,8 @@ section.main-section {
     font-size: 1em;
     font-family: Input Mono;
     font-weight: 100;
+}
+
+div #mainList {
+    margin: 0 auto;
 }

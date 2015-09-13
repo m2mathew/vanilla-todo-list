@@ -1,7 +1,5 @@
 "use strict";
 
-// STEP ONE: target elements
-
 var doLabel = document.getElementById("doLabel");
 var addButton = document.getElementById("addButton");
 var mainList = document.getElementById("mainList");
@@ -11,21 +9,21 @@ var doArray = [];
 var newListItem = "";
 
 
-
-// STEP TWO: create function
+function clearText(){
+    document.getElementById("doLabel").value = "";
+}
 
 function render() {
     mainList.innerHTML = "";
     newListItem = "";
 
     for (var i = 0; i < doArray.length; i++) {
-        newListItem = newListItem + doArray[i];
+
+        newListItem += doArray[i] + "<br>";
         mainList.innerHTML = newListItem;
     }
 }
 
-
-// STEP THREE: Add event listener
 
 // clear text in input text area
 doLabel.addEventListener("click", clearText);
@@ -37,16 +35,13 @@ addButton.addEventListener("click", function() {
 });
 
 
-
 // reset ALL list data and start over
 resetButton.addEventListener("click", function() {
-    var doArray = [];
-    var newListItem = "";
+    doArray = [];
+    newListItem = "";
     mainList.innerHTML = "";
 });
 
 
-function clearText(){
-  document.getElementById("doLabel").value = "";
-}
+
 
