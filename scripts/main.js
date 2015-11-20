@@ -1,5 +1,6 @@
 "use strict";
 
+// target elements
 var doLabel = document.getElementById("doLabel");
 var addButton = document.getElementById("addButton");
 var mainList = document.getElementById("mainList");
@@ -8,7 +9,7 @@ var resetButton = document.getElementById("resetButton");
 var doArray = [];
 var newListItem = "";
 
-
+// create functions
 function clearText(){
     document.getElementById("doLabel").value = "";
 }
@@ -18,13 +19,12 @@ function render() {
     newListItem = "";
 
     for (var i = 0; i < doArray.length; i++) {
-
         newListItem += doArray[i] + "<br>";
         mainList.innerHTML = newListItem;
     }
 }
 
-
+// add event listeners
 // clear text in input text area
 doLabel.addEventListener("click", clearText);
 
@@ -34,14 +34,9 @@ addButton.addEventListener("click", function() {
     render();
 });
 
-
 // reset ALL list data and start over
 resetButton.addEventListener("click", function() {
     doArray = [];
     newListItem = "";
     mainList.innerHTML = "";
 });
-
-
-
-
